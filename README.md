@@ -10,15 +10,15 @@ A simple todo app made using React.js
 
 ## Installation & Usage 🛠️
 
-1. Clone the repository.
-2. Navigate to the project directory.
+1. Clone the repository using `git clone https://github.com/BeanyTheCoder/react-todo-app.git`.
+
+2. Navigate to the project directory using `cd  react-todo-app`.
 3. Install dependencies with `npm install`.
 4. Run the app with `npm run dev`.
 
 ## Screenshots 📷
 
 ![image of the todo app](image.png)
-
 
 ## Technologies Used 🛠️
 
