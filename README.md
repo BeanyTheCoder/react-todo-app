@@ -1,14 +1,14 @@
 # React Todo App 🚀
 
-a simple todo app made using React.js
+A simple todo app made using React.js
 
 ## Features ✨
 
-- Ability to add, remove and check-off todos ✅
-- Ability to _remove all_ and _complete all_ todos at once✅
-- Cool design: [check out this article](https://www.codingnepalweb.com/create-todo-list-app-html-javascript/) ✅
+- Ability to add, remove and check-off todos 
+- Ability to _remove all_ and _complete all_ todos at once
+- Cool design from [this website](https://www.codingnepalweb.com/create-todo-list-app-html-javascript/) 
 
-## Installation 🛠️
+## Installation & Usage 🛠️
 
 1. Clone the repository.
 2. Navigate to the project directory.
@@ -17,11 +17,12 @@ a simple todo app made using React.js
 
 ## Screenshots 📷
 
-![image of the form](<Screenshot 2023-07-22 090124.png>)
+![image of the todo app](image.png)
+
 
 ## Technologies Used 🛠️
 
-- Reactjs
+- React.js
 - HTML & CSS
 
 ## License 📝
@@ -30,8 +31,8 @@ This project is licensed under the [License Name](link-to-license-file).
 
 ## Acknowledgments 🙏
 
-Inspiration from [this website](https://www.codingnepalweb.com/create-todo-list-app-html-javascript/)
+Inspiration for the design from [this website](https://www.codingnepalweb.com/create-todo-list-app-html-javascript/)
 
 ## Contact 📧
 
-For any questions or feedback, feel free to reach out to us at alexanderafoko@gmail.com
+For any questions or feedback, feel free to reach out to me at alexanderafoko@gmail.com
