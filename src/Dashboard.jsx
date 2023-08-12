@@ -2,7 +2,6 @@ import { useRef } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import "./App.css";
 
 export default function Dashboard({
   state: { todos, isCompletedNext },
@@ -43,29 +42,46 @@ export default function Dashboard({
 
   return (
     <>
-      <section className="dashboard">
+      <section className="container__dashboard">
         <h1>Todo App v1.0</h1>
-        <section className="input">
+        <section className="container__dashboard__field">
           {/* <p id="error" ref={errorRef}>e</p> */}
-          <input type="text" placeholder="Add new task" ref={todoInputRef} />
+          <input
+            className="container__dashboard__field__input"
+            type="text"
+            placeholder="Add new task"
+            ref={todoInputRef}
+          />
           <button
             onClick={addTodo}
-            className={todos.length < 20 ? "" : "disabled"}>
+            className={
+              todos.length < 20
+                ? "container__dashboard__field__button"
+                : "container__dashboard__field__button --disabled"
+            }>
             <FontAwesomeIcon icon={faPlus} />
           </button>
         </section>
 
-        <section className="info">
+        <section className="container__dashboard__info">
           <p>No. of tasks: {todos.length}</p>
-          <div className="buttons">
+          <div className="container__dashboard__info__buttons">
             <button
               onClick={removeAllTodos}
-              className={todos.length > 0 ? "" : "disabled"}>
+              className={
+                todos.length > 0
+                  ? "container__dashboard__info__buttons__button"
+                  : "container__dashboard__info__buttons__button --disabled"
+              }>
               Remove All
             </button>
             <button
               onClick={completeAllTodos}
-              className={todos.length > 0 ? "" : "disabled"}>
+              className={
+                todos.length > 0
+                  ? "container__dashboard__info__buttons__button"
+                  : "container__dashboard__info__buttons__button --disabled"
+              }>
               {isCompletedNext ? "Check All" : "Uncheck All"}
             </button>
           </div>

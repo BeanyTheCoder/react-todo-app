@@ -36,7 +36,7 @@ export default function App() {
         <Dashboard {...dashboardProps} />
 
         <section
-          className="todos"
+          className="container__todos"
           style={{
             borderTop: todos.length > 0 ? " #e6e6e6 2px solid" : "none",
           }}>

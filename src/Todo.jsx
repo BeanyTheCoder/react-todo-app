@@ -3,8 +3,6 @@ import { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
-import "./App.css";
-
 export default function Todo({
   state: { todos },
   stateChange: { setTodos },
@@ -23,10 +21,10 @@ export default function Todo({
   }
 
   return (
-    <li key={element.key}>
-      <div className="todo-main">
+    <li key={element.key} className="container__todos__todo">
+      <div className="container__todos__todo__body">
         <input
-          className="todo-checkbox"
+          className="container__todos__todo__body__checkbox"
           type="checkbox"
           checked={element.isCompleted}
           onClick={() => {
@@ -39,13 +37,13 @@ export default function Todo({
             textDecoration: element.isCompleted ? "line-through" : "none",
             opacity: element.isCompleted ? "0.35" : "1",
           }}
-          className="todo-text">
+          className="container__todos__todo__body__text">
           {element.value}
         </p>
       </div>
 
       <button
-        className="todo-button"
+        className="container__todos__todo__button"
         onClick={() => {
           removeTodo(index);
         }}>
