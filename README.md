@@ -18,7 +18,12 @@ A simple todo app made using React.js
 
 ## Screenshots 📷
 
-![image of the todo app](image.png)
+### Desktop:
+![image of the desktop view](image.png)
+
+### Mobile:
+
+![image of mobile view](image-1.png)
 
 ## Technologies Used 🛠️
 
