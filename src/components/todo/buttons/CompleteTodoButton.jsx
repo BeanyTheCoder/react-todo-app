@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function Checkbox({
+export default function CompleteTodoButton({
   state: { todos },
   setState: { setTodos },
   other: { index, element },

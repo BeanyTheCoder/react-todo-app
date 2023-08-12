@@ -1,23 +1,15 @@
-import { useState, useRef } from "react";
-
 import RemoveTodoButton from "./buttons/RemoveTodoButton";
-import Checkbox from "./Checkbox";
+import CompleteTodoButton from "./buttons/CompleteTodoButton";
 
-export default function Todo({
-  state: { todos },
-  setState: { setTodos },
-  other: { element, index },
-}) {
+export default function Todo(defaultPropset) {
+  let {
+    other: { element },
+  } = defaultPropset;
+
   return (
     <li key={element.key} className="container__todos__todo">
       <div className="container__todos__todo__body">
-        <Checkbox
-          {...{
-            state: { todos },
-            setState: { setTodos },
-            other: { index, element },
-          }}
-        />
+        <CompleteTodoButton {...defaultPropset} />
         <p
           style={{
             textDecoration: element.isCompleted ? "line-through" : "none",
@@ -28,9 +20,7 @@ export default function Todo({
         </p>
       </div>
 
-      <RemoveTodoButton
-        {...{ state: { todos }, setState: { setTodos }, other: { index } }}
-      />
+      <RemoveTodoButton {...defaultPropset} />
     </li>
   );
 }

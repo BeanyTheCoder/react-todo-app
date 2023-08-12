@@ -28,7 +28,7 @@ body {
   justify-content: center;
   flex-direction: column;
 
-  width: clamp(400px, 100vw, 450px);
+  width: clamp(320px, 100vw, 450px);
   padding-bottom: 2em;
   border-radius: 6px;
 }
@@ -36,7 +36,7 @@ body {
 .container__dashboard {
   display: flex;
   flex-direction: column;
-  padding: 1.75em;
+  padding: 2em;
   padding-bottom: 0;
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .container__dashboard h1 {
-  font-size: clamp(1.8rem, 5vmin, 2.75rem);
+  font-size: clamp(1.8rem, 5vmin, 2.5rem);
   margin-bottom: 1.25rem;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -75,13 +75,15 @@ body {
 .container__dashboard__field__button {
   border: 0;
 
-  aspect-ratio: 1;
+  width: 50px;
   font-size: 1.2em;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
 }
 
-.container__dashboard__field__button:hover {
+.container__dashboard__field__button:hover,
+.container__dashboard__field__button:focus,
+input:focus ~ .container__dashboard__field__button {
   background: var(--gradient);
   color: var(--light);
 }
@@ -108,10 +110,12 @@ body {
   color: var(--light);
   border: 0;
 
-  padding: 0.5em 1em;
+  width: 50px;
+
+  padding: 1em;
   border-radius: 4px;
 
-  font-size: 0.9rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -155,23 +159,20 @@ body {
   border-top: #e6e6e6 2px solid;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 475px) {
   body {
     padding: 0;
   }
 
   .container {
     min-height: 100vh;
+    width: 100vw;
     justify-content: flex-start;
   }
 
   .container__dashboard {
-    padding: 1.5em;
+    padding: 1.5em 1em;
     padding-bottom: 0;
     font-size: 1.1rem;
-  }
-
-  .container__dashboard__info__buttons__button {
-    font-size: 1rem;
   }
 }

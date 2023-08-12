@@ -1,39 +1,52 @@
 import { useState, useRef } from "react";
-import Dashboard from "./Dashboard";
-import Todo from "./Todo";
+import Dashboard from "./components/dashboard/Dashboard";
+import Todo from "./components/todo/Todo";
 
 import "./App.css";
 
 export default function App() {
-  let [todos, setTodos] = useState([]);
+  // default `todo` value for preview
+  let [todos, setTodos] = useState([
+    {
+      value: "Refactor react todo app on Github",
+      key: length,
+      isCompleted: true,
+    },
+
+    { value: "Renew gym membership", key: length, isCompleted: false },
+    { value: "Create a video for YouTube", key: length, isCompleted: false },
+    { value: "Write a blog about new trends", key: length, isCompleted: false },
+    {
+      value: "Send a project file to the client",
+      key: length,
+      isCompleted: false,
+    },
+  ]);
   let [isCompletedNext, setIsCompletedNext] = useState(true);
 
-  let errorRef = useRef();
-
-  function showError(message) {
-    // errorRef.current.innerText = message;
-    // errorRef.current.style.display = " block;";
-    // setTimeout(() => {
-    //   errorRef.current.style.display = "none"
-    // }, 1000);
-    alert(message);
-  }
-
-  let dashboardProps = {
+  let defaultPropset = {
     state: {
       todos,
       isCompletedNext,
     },
-    stateChange: {
+    setState: {
       setTodos,
       setIsCompletedNext,
     },
   };
 
+  // for preview
+
+  todos.push();
+  todos.push();
+  todos.push();
+  todos.push();
+  todos.push();
+
   return (
     <>
       <div className="container">
-        <Dashboard {...dashboardProps} />
+        <Dashboard {...defaultPropset} />
 
         <section
           className="container__todos"
@@ -42,34 +55,18 @@ export default function App() {
           }}>
           <ul>
             {todos.map((element, index) => {
-              let todoProps = {
-                state: {
-                  todos,
-                },
-                setState: {
-                  setTodos,
-                },
+              // creates custom propset using defaultPropset
+              let todoPropset = {
+                ...defaultPropset,
                 other: {
                   element,
                   index,
                 },
               };
-              return <Todo {...todoProps} />;
+              return <Todo {...todoPropset} />;
             })}
           </ul>
         </section>
-
-        {
-          /* <p>
-          Tasks pending:{" "}
-          {todos.reduce((accum, curr) => {
-            if (!curr.isCompleted) {
-              accum += 1;
-            }
-            return accum;
-          }, 0)}
-        </p> */
-        }
       </div>
     </>
   );
