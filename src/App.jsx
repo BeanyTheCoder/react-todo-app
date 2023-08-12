@@ -46,7 +46,7 @@ export default function App() {
                 state: {
                   todos,
                 },
-                stateChange: {
+                setState: {
                   setTodos,
                 },
                 other: {
