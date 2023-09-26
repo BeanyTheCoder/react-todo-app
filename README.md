@@ -19,11 +19,11 @@ A simple todo app made using React.js
 ## Screenshots 📷
 
 ### Desktop:
-![image of the desktop view](desktop.png)
+![image of the desktop view](readme-images/desktop.png)
 
 ### Mobile:
 
-![image of mobile view](mobile.png)
+![image of mobile view](readme-images/mobile.png)
 
 ## Technologies Used 🛠️
 
