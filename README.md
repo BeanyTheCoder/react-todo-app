@@ -25,6 +25,10 @@ A simple todo app made using React.js
 
 ![image of mobile view](readme-images/mobile.png)
 
+## Links 🔗
+
+Live site link: [here](https://beanythecoder.github.io/react-todo-app/)
+
 ## Technologies Used 🛠️
 
 - React.js
